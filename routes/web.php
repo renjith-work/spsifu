@@ -418,18 +418,18 @@ Route::post('/front/api/user/addresses/get-address', 'Front\Api\Checkout\Address
 Route::post('/front/api/user/addresses/check', 'Front\Api\Checkout\Address\AddressListController@check');
 
 // Test Endpoints - To be deleted.
-Route::get('/front/api/product/fabrics', 'Front\Api\Product\Fabric\FabricController@details');
-Route::get('/front/api/product/details', 'Front\Api\Product\ProductController@details');
-Route::get('/front/api/product/shirt/pockets', 'Front\Api\Product\Attribute\AttributeController@loadShirtPockets');
-Route::get('/front/api/measurement/profile/getattributes', 'Front\Api\Measurement\MeasurementProfileController@attributeValues');
-Route::get('/front/api/monogram/lists', 'Front\Api\Monogram\MonogramController@loadMonogramz');
-Route::get('/checkout/test', 'Ecommerce\CheckoutProcessingController@test');
-Route::get('/checkout/order/complete', 'Ecommerce\CheckoutProcessingController@completeOrder');
-Route::get('/checkout/order/pdf', 'Ecommerce\CheckoutProcessingController@pdfgenerator');
-Route::get('/checkout/order/pdf-view', 'Ecommerce\CheckoutProcessingController@pdfView');
-Route::get('/checkout/order/{id}/generate/invoice-pdf', 'Front\Pdf\InvoicePdfController@generateInvoicePdf');
-Route::get('/checkout/order/invoice/email-view', function (){
-		return new InvoiceMail();
-	}
-);
+// Route::get('/front/api/product/fabrics', 'Front\Api\Product\Fabric\FabricController@details');
+// Route::get('/front/api/product/details', 'Front\Api\Product\ProductController@details');
+// Route::get('/front/api/product/shirt/pockets', 'Front\Api\Product\Attribute\AttributeController@loadShirtPockets');
+// Route::get('/front/api/measurement/profile/getattributes', 'Front\Api\Measurement\MeasurementProfileController@attributeValues');
+// Route::get('/front/api/monogram/lists', 'Front\Api\Monogram\MonogramController@loadMonogramz');
+// Route::get('/checkout/test', 'Ecommerce\CheckoutProcessingController@test');
+// Route::get('/checkout/order/complete', 'Ecommerce\CheckoutProcessingController@completeOrder');
+// Route::get('/checkout/order/pdf', 'Ecommerce\CheckoutProcessingController@pdfgenerator');
+// Route::get('/checkout/order/pdf-view', 'Ecommerce\CheckoutProcessingController@pdfView');
+// Route::get('/checkout/order/{id}/generate/invoice-pdf', 'Front\Pdf\InvoicePdfController@generateInvoicePdf');
+// Route::get('/checkout/order/invoice/email-view', function (){
+// 		return new InvoiceMail();
+// 	}
+// );
 
