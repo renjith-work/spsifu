@@ -17,11 +17,11 @@ class DatabaseSeeder extends Seeder
             SettingsTableSeeder::class,
             CountryTableSeeder::class,
         	// Post Seeder
-            PostCategoryTableSeeder::class,
+            // PostCategoryTableSeeder::class,
             // PostDesignTableSeeder::class,
             PostStatusTableSeeder::class,
-            PostTableSeeder::class,
-            PostTagTableSeeder::class,
+            // PostTableSeeder::class,
+            // PostTagTableSeeder::class,
             // postRTagTableSeeder::class,
 
             // Roles and Permissions Seeder
