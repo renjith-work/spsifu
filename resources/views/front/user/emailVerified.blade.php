@@ -14,7 +14,7 @@
                     <div class="px-auth-box-body">
                         <div class="email-verify-body">
                             <h3>Congratulations!</h3>
-                            <p>You have successfully signed up with <b><a href="/">Pixtent CMS</a></b>. <br>
+                            <p>You have successfully signed up with <b><a href="/">Supreme Sifu</a></b>. <br>
                                 You can either click <a href="/">Home Page</a> and go to Home Page of the  website or you can click this link to access your <a href="/user/dashboard">User Dashboard</a>.</p>
                             <p>Thank You.</p>
                         </div>
