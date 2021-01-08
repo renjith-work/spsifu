@@ -76,8 +76,8 @@ class ShirtController extends Controller
                 'endDate' => 'required_with:splPrice',
                 'taxClass' => 'required_if:taxable,==,1',
                 'document' => 'mimes:pdf|max:10000',
-                'p_image' =>   'required|image|mimes:jpeg,png,jpg,gif,svg|max:2000',
-                's_image' =>   'required|image|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                'p_image' =>   'required|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                's_image' =>   'required|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'album*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'pageTitle' => 'required',
                 'metatag' => 'required',
@@ -87,6 +87,8 @@ class ShirtController extends Controller
                 'taxClass.required_if' => 'Please select a tax class if the product is taxable.',
                 'p_image.max' => 'Max image upload size is 2 MB.',
                 's_image.max' => 'Max image upload size is 2 MB.',
+                'p_image.image' => 'Primary Image - Please select an image file as primary image.',
+                's_image.image' => 'Secondary Image - Please select an image file as secondary image.',
                 'album.max' => 'Max image upload size is 2 MB.',
             ]
         );
@@ -100,7 +102,6 @@ class ShirtController extends Controller
             $design->summary = $request->summary;
             $design->featured = $request->featured;
             $design->menu = $request->menu;
-            $design->tax_class_id = $request->taxClass;
             $design->pageTitle = $request->pageTitle;
             $design->metatag = $request->metatag;
             $design->metadescp = $request->metadescp;
@@ -171,8 +172,8 @@ class ShirtController extends Controller
                 'endDate' => 'required_with:splPrice',
                 'taxClass' => 'required_if:taxable,==,1',
                 'document' => 'mimes:pdf|max:10000',
-                'p_image' =>   'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
-                's_image' =>   'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                'p_image' =>   'mimes:jpeg,png,jpg,gif,svg|max:2000',
+                's_image' =>    'mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'album*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'pageTitle' => 'required',
                 'metatag' => 'required',
@@ -182,6 +183,8 @@ class ShirtController extends Controller
                 'taxClass.required_if' => 'Please select a tax class if the product is taxable.',
                 'p_image.max' => 'Max image upload size is 2 MB.',
                 's_image.max' => 'Max image upload size is 2 MB.',
+                'p_image.image' => 'Primary Image - Please select an image file as primary image.',
+                's_image.image' => 'Secondary Image - Please select an image file as secondary image.',
                 'album.max' => 'Max image upload size is 2 MB.',
             ]
         );
@@ -195,7 +198,6 @@ class ShirtController extends Controller
             $design->summary = $request->summary;
             $design->featured = $request->featured;
             $design->menu = $request->menu;
-            $design->tax_class_id = $request->taxClass;
             $design->pageTitle = $request->pageTitle;
             $design->metatag = $request->metatag;
             $design->metadescp = $request->metadescp;
