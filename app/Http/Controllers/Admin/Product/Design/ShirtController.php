@@ -147,6 +147,7 @@ class ShirtController extends Controller
         return view('admin.product.design.shirt.edit')->with('design', $design)->with('attributeSets', $attributeSets)->with('taxClasses', $taxClasses)->with('weightUnits', $weightUnits);
     }
 
+    // Checkit if the thing actually works.
     /**
      * Update the specified resource in storage.
      *
