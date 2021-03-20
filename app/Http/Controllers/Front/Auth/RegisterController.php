@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Front\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+
 use Carbon\Carbon;
 use Validator;
 use App\User;
@@ -81,5 +83,23 @@ class RegisterController extends Controller
                 return redirect()->back()->withInput()->withErrors($validator);
             }
         }
+    }
+
+    public function testUser()
+    {
+        DB::table('users')->delete();
+        $user = new User;
+        $user->fname = 'Renjith';
+        $user->lname = 'R S';
+        $user->email = 'info@rsrenjith.com';
+        $user->password = Hash::make('passmenow123!');
+        $user->save();
+
+
+        $user->sendEmailVerificationNotification();
+        Auth::login($user);
+
+        $users = User::all();
+        return response()->json($users);
     }
 }

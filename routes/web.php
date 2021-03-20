@@ -22,6 +22,7 @@ Auth::routes(['verify' => true]);
 // Initial Routes
 Route::get('/test', 'HomeController@test')->middleware('verified');
 Route::get('/email', 'HomeController@mail')->name('sendEmail');
+Route::get('/test/user/create', 'Front\Auth\RegisterController@testUser');
 // Route::get('/debug-sentry', function () {
 // 	throw new Exception('My first Sentry error!');
 // });
