@@ -71,8 +71,8 @@ class ShirtController extends Controller
                 'summary' => 'required',
                 'price' => 'required',
                 'document' => 'mimes:pdf|max:10000',
-                'p_image' =>   'required|image|mimes:jpeg,png,jpg,gif,svg|max:2000',
-                's_image' =>   'required|image|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                'p_image' =>   'required|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                's_image' =>   'required|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'album*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'pageTitle' => 'required',
                 'metatag' => 'required',
@@ -81,6 +81,8 @@ class ShirtController extends Controller
             [
                 'p_image.max' => 'Max image upload size is 2 MB.',
                 's_image.max' => 'Max image upload size is 2 MB.',
+                'p_image.image' => 'Primary Image - Please select an image file as primary image.',
+                's_image.image' => 'Secondary Image - Please select an image file as secondary image.',
                 'album.max' => 'Max image upload size is 2 MB.',
             ]
         );
@@ -94,7 +96,10 @@ class ShirtController extends Controller
             $design->summary = $request->summary;
             $design->featured = $request->featured;
             $design->menu = $request->menu;
+<<<<<<< HEAD
             $design->price = $request->price;
+=======
+>>>>>>> dev
             $design->pageTitle = $request->pageTitle;
             $design->metatag = $request->metatag;
             $design->metadescp = $request->metadescp;
@@ -139,6 +144,7 @@ class ShirtController extends Controller
         return view('admin.product.design.shirt.edit')->with('design', $design)->with('attributeSets', $attributeSets)->with('taxClasses', $taxClasses)->with('weightUnits', $weightUnits);
     }
 
+    // Checkit if the thing actually works.
     /**
      * Update the specified resource in storage.
      *
@@ -158,8 +164,8 @@ class ShirtController extends Controller
                 'summary' => 'required',
                 'price' => 'required',
                 'document' => 'mimes:pdf|max:10000',
-                'p_image' =>   'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
-                's_image' =>   'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
+                'p_image' =>   'mimes:jpeg,png,jpg,gif,svg|max:2000',
+                's_image' =>    'mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'album*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2000',
                 'pageTitle' => 'required',
                 'metatag' => 'required',
@@ -168,6 +174,8 @@ class ShirtController extends Controller
             [
                 'p_image.max' => 'Max image upload size is 2 MB.',
                 's_image.max' => 'Max image upload size is 2 MB.',
+                'p_image.image' => 'Primary Image - Please select an image file as primary image.',
+                's_image.image' => 'Secondary Image - Please select an image file as secondary image.',
                 'album.max' => 'Max image upload size is 2 MB.',
             ]
         );
