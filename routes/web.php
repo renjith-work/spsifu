@@ -76,9 +76,9 @@ Route::group(['prefix'  =>   'user', 'as' => 'user.'], function() {
 	Route::get('pasword/reset/email', 'Front\User\PasswordController@forgot');
 });
 
-// User Address Api Routes
+//User Address Api Routes
 
-//Socialite
+//Socialite Login Routes
 //Google
 Route::get('/login/google', 'Front\Auth\LoginController@redirectToGoogle');
 Route::get('/login/google/callback', 'Front\Auth\LoginController@handleGoogleCallback');
